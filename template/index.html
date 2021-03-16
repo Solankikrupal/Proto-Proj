@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Wat a Database</title>
+  </head>
+  <body>
+    {% if all_data %}
+    <ol>
+    {% for en in all_data %}
+    <li><h2>User Info</h2></li>
+    <div>
+      <ul>
+          <li>First Name : {{ en.first_name }}</li>
+          <li>Last Name : {{ en.last_name }}</li>
+          <li>Email : {{ en.e_mail }}</li>
+      </ul>
+
+    </div>
+
+      {% endfor %}
+  </ol>
+    {% else %}
+    <p>Nadaa</p>
+    {% endif %}
+
+  </body>
+</html>
